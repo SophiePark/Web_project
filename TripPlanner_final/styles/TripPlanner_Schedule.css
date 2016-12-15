@@ -1,0 +1,575 @@
+@font-face {
+  font-family: 'raleway-t';
+  src: url("fonts/raleway_thin-webfont.ttf");
+}
+@font-face {
+  font-family: 'raleway-r';
+  src: url("fonts/Raleway-Regular.ttf");
+}
+@font-face {
+  font-family: 'raleway-m';
+  src: url("fonts/Raleway-Medium.ttf");
+}
+@font-face {
+  font-family: 'raleway-sb';
+  src: url("fonts/Raleway-SemiBold.ttf");
+}
+/*before_schedule*/
+#exist_plans,#new_plan{
+  overflow:hidden;
+  float:left;
+  width: 200px;
+  height:200px;
+  text-align:center;
+  margin:57px;
+}
+#exist_plans a,#new_plan a{
+  float:left;
+  color:#757266;
+  padding: 70px 40px 60px 40px;
+  font-size:20pt;
+  /* font-weight:bolder; */
+  border:solid #757266;
+  font-family: 'raleway-sb',sans-serif;
+}
+#exist_plans {
+  background: #ccc url("images/bf_s_yourplan.png");
+}
+#new_plan{
+  background-image:url("images/icons/plusicon2.png");
+
+}
+#new_plan a{
+  background-color:RGBA(1,1,1,0.1);
+  border: dotted;
+  border-radius:0 0 30px 0;
+}
+#exist_plans a:hover,#new_plan a:hover{
+  background-color:#FFCC33;
+}
+
+/*------------------------page3 schedule-------------------------*/
+.container2,#container_bf_s,#container_schedule_exist{
+  float: left;
+  width: 630px;
+  height: 510px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 175px;
+  bottom: 0;
+  margin: auto;
+  /* margin-left: 30%; */
+  /* margin-right: 30%; */
+  margin-top: 5%;
+  background-color: RGBA(255,255,255,0.8);
+  color: #757266;
+}
+#container_bf_s{
+  height:300px;
+}
+.container2 div div div{
+  color: #110e25;
+}
+.tabS-content{
+  display: none;
+  /* margin-top: 3%; */
+  height: 380px;
+  overflow: hidden;
+  padding: 45px 45px 20px 45px;
+  background-color: RGBA(255,255,255,0.8);
+}
+.tabS-content h2{
+  font-size:30px;
+  margin-top: 0;
+  font-weight: lighter;
+}
+/*------tab1,2-----*/
+#trip_type{
+  padding:0 0 10px 5px;
+  font-weight: lighter;
+}
+#same{
+  overflow:hidden;
+  background-color:RGBA(1,0,0,0.1);
+
+}
+
+.whereUAt{
+  padding:10px 5px;
+  margin:15px;
+  height:40px;
+  background-color:RGBA(1,0,0,0.1);
+}
+.whereUGo{
+  float:left;
+  overflow:hidden;
+  background-color:RGBA(1,0,0,0.1);
+  width:510px;
+  margin:0 15px 15px 15px ;
+
+}
+
+.whereUAt p,
+.destination p{
+  float:left;
+  margin: 10px 10px;
+  width:110px;
+  font-weight: lighter;
+}
+.whereUAt input,
+.destination input{
+  float:left;
+  width:300px;
+  height:38px;
+  border:solid 1px white;
+  font-size:18px;
+  font-family:'raleway',sans-serif;
+  padding:10px
+}
+.destination{
+  overflow:hidden;
+  padding:10px 0 5px 0 ;
+  margin: 10px 0 5px 0;;
+}
+.inputdates{
+  float:left;
+  overflow:hidden;
+  padding:0;
+  margin: 5px 0 0 10px;
+  height:50px;
+  width: 240px;
+}
+.inputdates p{
+  float:left;
+  margin: 10px 10px 5px 5px;
+  font-weight: lighter;
+}
+
+.inputdates input[type="date"]{
+  float:left;
+  background-color: white;
+  width: 135px;
+  height:38px;
+  padding: 0 0 0 5px;
+  margin: 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  font-size:15px;
+  font-family:'raleway',sans-serif;
+  color:#757266;
+
+}
+::-webkit-calendar-picker-indicator {
+  background:url(images/icons/calendaricon.png)no-repeat center;
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  width:27px;
+  height:39px;
+  margin:0;
+  padding:0;
+}
+::-webkit-calendar-picker-indicator:hover{
+  background-color:#FFCC33;
+  opacity: 1;
+}
+
+
+#diff{
+  display: none;
+  overflow: scroll;
+  height: 240px;
+  background-color:RGBA(1,0,0,0.1);
+}
+.diff_inout{
+  overflow:hidden;
+  background-color:RGBA(1,0,0,0.1);
+  width:510px;
+  height: 110px;
+  margin:0 0 15px 15px;
+}
+.destination_diff{
+  float:left;
+  width:280px;
+  height: 110px;
+}
+
+.destination_diff p{
+  width:200px;
+  margin: 15px;
+  font-weight:bolder;
+}
+.destination_diff input{
+  width:250px;
+  height:38px;
+  margin: 0 0 10px 10px;
+  background-color: white;
+  padding: 0 0 0 5px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  font-size:18px;
+  /* font-family:'track',sans-serif; */
+  color:#757266;
+}
+.inputdates_diff{
+  float:left;
+  width:230px;
+  height: 110px;
+}
+.inputdates_diff p{
+  margin: 15px;
+  font-weight:bolder;
+}
+.inputdates_diff input{
+  background-color: white;
+  width: 135px;
+  height:38px;
+  padding: 0 0 0 5px;
+  margin: 0 0 0 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  font-family:'track',sans-serif;
+  color:#757266;
+}
+.canAdd-hotel,.canAdd-visit,.canAdd-city{
+  overflow:hidden;
+  background-color:RGBA(1,0,0,0.1);
+  padding:10px
+}
+.t1_line{
+  float:left;
+  overflow:hidden;
+  background-color:RGBA(1,0,0,0.1);
+  width:575px;
+  margin: 0 0 5px 0;
+}
+.nth-destination{
+  float:left;
+  overflow:hidden;
+  padding:10px 0 5px 0;
+  margin: 5px 0 5px 0;
+}
+.nth-destination p{
+  float:left;
+  margin: 10px 0 5px 3px;
+  width: 62px;
+  font-weight: lighter;
+  font-size: 13px;
+  font-family: 'raleway-sb',sans-serif;
+}
+.nth-destination input{
+  float:left;
+  width: 100px;
+  height:32px;
+  border:solid 1px white;
+  font-size: 13px;
+  /* font-family:'track',sans-serif; */
+  padding: 10px;
+  margin-right: 5px;
+  margin-left: 0;
+}
+.nth-inputdates p{
+  float:left;
+  margin: 10px 5px 5px 5px;
+  font-weight: lighter;
+  font-size: 12px;
+  font-family: 'raleway-sb',sans-serif;
+}
+.nth-inputdates{
+  float:left;
+  overflow:hidden;
+  padding:0;
+  margin: 15px 0 0 0;
+  height:32px;
+  width: 150px;
+}
+.nth-inputdates input{
+  float:left;
+  background-color: white;
+  width: 110px;
+  height:32px;
+  padding: 0 0 0 5px;
+  margin: 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  font-size:9px;
+  font-family:'track',sans-serif;
+  color:#757266;
+}
+.plus a{
+  float:left;
+  margin-left:180px;
+  margin-right:150px;
+  margin-bottom: 15px;
+  border:dotted 3px #757266;
+  border-radius:0 0 25px 25px;
+  padding: 1px 100px;
+  height:27px;
+  background: #E0E0E0 url("images/icons/plusicon.png") no-repeat center;
+}
+.plus a:hover{
+  background-color:#BDBDBD;
+}
+#tab1_plane2{
+  padding: 45px 15px 18px 15px;
+}
+#tab1_plane2 h2{
+  padding:0 15px;
+}
+/*--------tab3--------*/
+
+#tab2_sleep h2{
+  float:left;
+  width:540px;
+}
+
+.t2-upload label,.t3-upload label {
+  display: inline-block;
+}
+
+.t2-upload input[type="file"],.t3-upload input[type="file"]  {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip:rect(0,0,0,0);
+  border: 0;
+}
+
+.detailInput{
+  float:right;
+  margin: 5px 0 0 0;
+}
+
+.detailInput input[type="text"]{
+  width:280px;
+  height:38px;
+  font-size:13px;
+  padding:0 10px
+}
+
+/*--------tab4--------*/
+.t3_line,.t2_line{
+  background-color:RGBA(1,0,0,0.1);
+  overflow:hidden;
+  width:500px;
+  padding:10px;
+}
+.where,.visitplace,.t3-upload,.when,.input_hotel{
+  float:left;
+}
+#tab3_visit h2{
+  float:left;
+  width:540px;
+  margin-right: 250px;
+}
+.where,.when{
+  margin-right:10px;
+}
+.selectCC{
+  width: 120px;
+  height: 39px;
+  border: 1px solid #ccc;
+  font-size:15px;
+  /* font-family:'track',sans-serif; */
+}
+.selectdate{
+  width: 80px;
+  height: 39px;
+  border: 1px solid #ccc;
+  font-size:15px;
+  /* font-family:'track',sans-serif; */
+}
+.visitplace input,.input_hotel input{
+  width: 240px;
+  padding: 0 10px;
+  margin: 0;
+  height:40px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-right:none;
+  font-size: 15px;
+  /* font-family:'track',sans-serif; */
+}
+.t2-upload,.t3-upload{
+  margin:0;
+}
+
+.t2-upload label img,.t3-upload img{
+  border: 1px solid #ccc;
+  border-left:none;
+  background-color:white;
+  padding:4px;
+}
+.t2-upload label img:hover,.t3-upload img:hover{
+  background-color:#FFDC46;
+}
+
+.tabS-content.active{
+  display: block;}
+
+.tab-links{
+  /* color:#757266; */
+}
+.tab-links:hover{
+  background-color:#FFDC46;
+}
+.tab-links.active{
+  background-color:#FFDC46;
+}
+
+.form-bottom{
+  margin-top: 20px;
+  margin-bottom: 50px;
+  overflow: inherit;
+}
+.form-bottom div:not(#finish_schedule){
+  padding:10px;
+  border-radius: 30px;
+  background-color:#FFDC46;
+  width: 135px;
+  text-align:center;
+  margin: 0 15px;
+}
+.form-bottom a{
+  color:#757266;
+  padding:10px;
+  font-size: 18px;
+  font-weight: lighter;
+}
+.form-bottom div:not(#finish_schedule):hover{
+  background-color:#757266;
+}
+.form-bottom a:hover{
+  color:#FFDC46;
+}
+.next-btn{
+  float:right;
+}
+.next-btn button, #finish_schedule a{
+  background-color:#FFDC46;
+  padding: 8px;
+  border: none;
+  border-radius: 30px;
+  width: 145px;
+  font-family:'raleway-r',sans-serif;
+  margin: 0 10px 0 0;
+  font-size:20px;
+  color:#757266;
+}
+.next-btn button:hover, #finish_schedule a:hover{
+  background-color:#757266;
+  color:#FFDC46;
+}
+#finish_schedule a{
+  padding:8px 50px;
+}
+#finish_schedule{
+  margin:10px 0;
+}
+.prev-btn{
+  float:left;
+}
+
+.tabsS{
+  list-style-type: none;
+  margin: 0;
+  /* margin-top: 3%; */
+  /* margin-left:12%; */
+  padding: 0;
+  width: 630px;
+}
+.tabsS li{
+  display: inline;
+  margin: 0;
+  /* padding: 0; */
+  /* padding-top: 10%; */
+}
+
+.tab-links{
+  /* width: 30; */
+  padding: 6px 78px 5px;
+}
+
+
+/*schedule_exist------------------------*/
+#container_schedule_exist{
+  margin-left:27%;
+  padding:45px;
+  height:400px;
+}
+#container_schedule_exist h2{
+  font-size:35px;
+  color: RGBA(255,255,255,0);
+  font-weight: lighter;
+  text-shadow: 1px 2px #757266;
+  width:500px;
+  margin:0;
+  padding:20px;
+  background-color:RGBA(1,1,1,0.1);
+}
+
+#container_schedule_exist ul{
+  margin-top:30px;
+  height:250px;
+}
+#container_schedule_exist li{
+  margin-bottom:15px;
+  font-size:25px;
+  color:#757266;
+  font-weight:100;
+}
+
+#return_btn{
+  float:right;
+  padding:10px;
+  border-radius: 30px;
+  background-color:#FFDC46;
+  width:170px;
+  text-align:center;
+}
+
+#return_btn:hover{
+  background-color:#757266;
+
+}
+#return_btn a{
+  color:#757266;
+  padding:10px;
+  font-size: larger;
+  font-weight: 100;
+}
+#return_btn a:hover{
+  color:#FFDC46;
+}
+
+.canAdd-hotel,.canAdd-visit{
+  height:180px;
+  overflow:scroll;
+}
+.canAdd-city{
+  height:180px;
+  overflow:scroll
+}
+.canAdd-city .addMsg{
+  font-family:'raleway-sb',sans-serif;
+  font-size:40px;
+  padding:60px 85px;
+  color:#ccc;
+}
+.canAdd-hotel .addMsg,.canAdd-visit .addMsg{
+  font-family:'raleway-sb',sans-serif;
+  font-size:40px;
+  padding:20px 50px;
+  color:#ccc;
+  margin:0;
+}
+.uldiv3{
+  height: 300px;
+}
+#container_schedule_exist{
+  height:400px
+}

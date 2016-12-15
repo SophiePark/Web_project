@@ -1,0 +1,282 @@
+<html>
+	<head>
+		<title>TripPlanner</title>
+ 		<link rel="stylesheet" href="styles/TripPlanner.css">
+    <link rel="stylesheet" href="styles/TripPlanner_Schedule.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js" type="text/javascript"></script>
+		<script src="tripPlanner.js" type="text/javascript"></script>
+		<script src="schedule.js" type="text/javascript"></script>
+
+	</head>
+	<body>
+    <header>
+      <div id = "navbar">
+        <nav>
+          <div id = "navbar_title">
+            <a href="home.html">Trip Planner</a>
+          </div>
+          <div id = "navbar_menu">
+            <ul>
+              <li ><a href="home.html" >HOME</a></li>
+              <li class="active"><a href="before_schedule.html" >SCHEDULE</a></li>
+              <li><a href="checklist.html" >CHECKLIST</a></li>
+              <li><a href="overview.html" >OVERVIEW</a></li>
+              <li><a href="login.html" >LOGIN</a></li>
+              <li id="menuicon"><img src="styles/images/icons/menuicon.png",png></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+		<section>
+			<div class="container2">
+				<ul class = "tabsS">
+					<li><img href="javascript:void(0)" class="tab-links active" onclick="openTabS(event,'tab1_plane1')" src="styles/images/icons/planeicon.png",png></li>
+					<li><img href="javascript:void(0)" class="tab-links" onclick="openTabS(event,'tab2_sleep')" src="styles/images/icons/sleepicon.png",png></li>
+					<li><img href="javascript:void(0)" class="tab-links" onclick="openTabS(event,'tab3_visit')" src="styles/images/icons/spoticon.png",png></li>
+				</ul>
+
+				<div>
+					<div id="tab1_plane1"  class = "tabS-content active">
+						<h2>WHERE WOULD YOU LIKE TO GO?</h2>
+						<form class="p1_form">
+							<div id="trip_type">
+								<input type="radio" name="trip_type" value="sameInOut" onclick="changeTripType('same')" checked = "checked">In-Out Same
+								<input type="radio" name="trip_type" value="diffInOut" onclick="changeTripType('diff')">In-Out Different
+							</div>
+							<div id="same">
+								<div class="whereUAt">
+									<p>DEPARTURE</p> <!--destination-->
+									<input type="text" placeholder="A Point OF Departure" >
+								</div>
+								<div class="whereUGo">
+									<div class="destination">
+										<p>DESTINATION</p><!--destination-->
+										<input type="text" placeholder="Destination Country, City" >
+									</div>
+									<div class="inputdates">
+										<p>IN DATE</p><!--start date-->
+										<input type="date" class="datePicker" class="input_indate">
+									</div>
+									<div class="inputdates">	<!--start date-->
+										<p>OUT DATE</p>
+										<input type="date" class="datePicker" class="input_outdate">
+									</div>
+								</div>
+							</div>
+							<div id="diff">
+								<div class="whereUAt">
+									<p>DEPARTURE</p> <!--destination-->
+									<input type="text" placeholder="A Point OF Departure" >
+								</div>
+								<div class="whereUGo_diff">
+									<div class="diff_inout">
+										<div class="destination_diff">
+											<p>FIRST DESTINAITON</p><!--destination-->
+											<input type="text" placeholder="Destination Country, City" >
+										</div>
+									<div class="inputdates_diff">
+										<p>IN DATE</p><!--start date-->
+										<input type="date" class="datePicker" class="input_indate">
+									</div>
+									</div>
+									<div class="diff_inout">
+										<div class="destination_diff">
+											<p>LAST DESTINAITON</p><!--destination-->
+											<input type="text" placeholder="Destination Country, City" >
+										</div>
+										<div class="inputdates_diff">	<!--start date-->
+											<p>OUT DATE</p>
+											<input type="date" class="datePicker" class="input_outdate">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class = "form-bottom">
+								<div id = "next_dest"class="next-btn"> <!--next button-->
+									<a href="javascript:void(0)" onclick="openTabS(event,'tab1_plane2')">Next-></a>
+								</div>
+							</div>
+						</form>
+					</div>
+
+					<div id="tab1_plane2"  class = "tabS-content">
+						<h2>ADD ANOTHER CITY, IF YOU WANT!</h2>
+							<form class="p2_form">
+								<div class="canAdd-city scroll"id="add-city">
+									<div class="t1_line" id="t1_parent">
+										<div class="nth-destination">
+											<p>MOVE TO</p><!--destination-->
+											<input id = "dest_country" type="text" placeholder="Country" >
+                      <input id = "dest_city" type="text" placeholder="City" >
+										</div>
+										<div class="nth-inputdates">
+											<p>IN</p><!--start date-->
+											<input id = "in_date" type="date" class="input_indate">
+										</div>
+										<div class="nth-inputdates">	<!--start date-->
+											<p>OUT</p>
+											<input id = "out_date" type="date" class="input_outdate">
+										</div>
+									</div>
+                  <p class="addMsg">YOU CAN ADD MORE</p>
+								</div>
+								<div class="plus"> <!--plus-->
+                  <a href="javascript:void(0)" onclick="addLine('add-city','t1_parent')"></a>	<!-- <i class="fa fa-calendar"> -->
+								</div>
+								<div class = "form-bottom">
+									<div class="prev-btn"> <!--privious button-->
+										<a href="javascript:void(0)" onclick="openTabS(event,'tab1_plane1')"><-Previous</a>
+									</div>
+									<div id = "next_addDest" class="next-btn"> <!--next button-->
+										<a href="javascript:void(0)" onclick="openTabS(event,'tab2_sleep')">Next-></a>
+									</div>
+								</div>
+							</form>
+					</div>
+
+					<div id="tab2_sleep" class = "tabS-content">
+						<h2>WHERE DO YOU SLEEP?</h2>
+						<form class="s_form">
+							<div class="canAdd-hotel scroll"id="add-hotel">
+								<div class = "t2_line" id="t2_parent">
+                  <div class="where" class="hotel_where"> <!--coutry, city-->
+                    <select id = "sleep_where" name="sleep_where" class="selectCC">
+											<option value="">WHERE?</option>
+
+										<!--
+                      <optgroup label="Country1">
+                        <option value="C1c1">City1</option>
+                        <option value="C1c2">City2</option>
+                      </optgroup>
+                      <optgroup label="Country2">
+                        <option value="C2c1">City1</option>
+                        <option value="C2c2">City2</option>
+
+                      </optgroup>
+										-->
+
+                    </select>
+                  </div>
+                  <div class="when" class="hotel_when"> <!--coutry, city-->
+                    <select id="sleep_when" name="sleep_when" class="selectdate">
+
+											<option value="">WHEN?</option>
+											<!--
+                      <optgroup label="in Country1,City1">
+                        <option value="datec1c1">Date1</option>
+                        <option value="datsc1c2">Date2</option>
+                      </optgroup>
+										-->
+                    </select>
+                  </div>
+                  <div class="input_hotel"> <!--end date-->
+                    <input type="text" placeholder="Where you sleep?">
+                  </div>
+                  <div class="t2-upload">
+                    <label for="upload_visit"><img src="styles/images/icons/uploadicon.png",png></label>
+                    <input type="file" id="upload_hotel">
+                  </div>
+                  <div class="detailInput">
+                    Important <input type="checkbox" name="important" value="important">
+                    <input type="text" placeholder="MEMO ex)REMEMBER! check-in EARLY!">
+                  </div>
+							</div>
+                <p class="addMsg">YOU CAN ADD MORE</p>
+						</div>
+							<div class="plus"> <!--plus-->
+                <a href="javascript:void(0)" onclick="addLine('add-hotel','t2_parent')"></a>	<!-- <i class="fa fa-calendar"> -->
+							</div>
+
+							<div class = "form-bottom">
+								<div class="prev-btn"> <!--privious button-->
+									<a href="javascript:void(0)" onclick="openTabS(event,'tab1_plane2')"><-Previous</a>
+								</div>
+								<div id = "next_stay" class="next-btn"> <!--next button-->
+									<a href="javascript:void(0)" onclick="openTabS(event,'tab3_visit')">Next-></a>
+								</div>
+							</div>
+						</form>
+					</div>
+
+					<div id="tab3_visit" class = "tabS-content">
+						<h2>MUST VISIT and CHECK</h2>
+						<form class="v_form">
+							<div class="canAdd-visit scroll" id="add-visit">
+                <div class = "t3_line" id="t3_parent">
+                  <div class="where" class="visit_where"> <!--coutry, city-->
+                    <select id = "visit_where" name="visit_where" class="selectCC">
+                    <option value="">WHERE?</option>
+										<!--
+										<optgroup label="Country1">
+                      <option value="C1c1">City1</option>
+                      <option value="C1c2">City2</option>
+                    </optgroup>
+                    <optgroup label="Country2">
+                      <option value="C2c1">City1</option>
+                      <option value="C2c2">City2</option>
+                    </optgroup>
+									-->
+                    </select>
+                  </div>
+                  <div class="when" class="visit_when"> <!--coutry, city-->
+                    <select id="visit_when" name="when-visits" class="selectdate">
+                    <option value="">WHEN?</option>
+										<!--
+                    <optgroup label="in Country1,City1">
+                      <option value="datec1c1">Date1</option>
+                      <option value="datsc1c2">Date2</option>
+                    </optgroup>
+										-->
+                    </select>
+                  </div>
+                  <div class="visitplace"> <!--end date-->
+                    <input type="text" placeholder="Where you go?">
+                  </div>
+                    <div class="t3-upload">
+                      <label for="upload_visit"><img src="styles/images/icons/uploadicon.png",png></label>
+                      <input type="file" id="upload_visit">
+                    </div>
+                  <div class="detailInput">
+                    Important <input type="checkbox" name="important" value="important">
+                    <input type="text" placeholder="MEMO ex)Pay for ticket, cash ONLY!">
+                  </div>
+                </div>
+                <p class="addMsg">YOU CAN ADD MORE</p>
+              </div>
+								  <div class="plus"> <!--plus-->
+                    <a href="javascript:void(0)" onclick="addLine('add-visit','t3_parent')"></a>	<!-- <i class="fa fa-calendar"> -->
+								  </div>
+								<div class = "form-bottom">
+								<div class="prev-btn"> <!--privious button-->
+									<a href="javascript:void(0)" onclick="openTabS(event,'tab2_sleep')"><-Previous</a>
+								</div>
+								<div class="next-btn" id="finish_schedule"> <!--next button-->
+                  <a href="javascript:void(0)" onclick="updateDB()">Finish</a>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+    <footer>
+      <div id="footer">
+        <div id="footer_aboutUs">
+          <h2>About Us :</h2>
+          <ul>
+            <li>Team : W4Schools</li>
+            <li>Prject Name : TRIP PLANNER</li>
+          </ul>
+        </div>
+        <div id="footer_copyright">
+          <h2>Copyright By : </h2>
+          <p>Hanyang University, Computer Science Engineering, W4Schools</p>
+        </div>
+      </div>
+    </footer>
+
+	</body>
+</html>

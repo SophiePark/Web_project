@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'raleway-t';
+  src: url("fonts/raleway_thin-webfont.ttf");
+}
+@font-face {
+  font-family: 'raleway-r';
+  src: url("fonts/Raleway-Regular.ttf");
+}
+@font-face {
+  font-family: 'raleway-m';
+  src: url("fonts/Raleway-Medium.ttf");
+}
+@font-face {
+  font-family: 'raleway-sb';
+  src: url("fonts/Raleway-SemiBold.ttf");
+}
+/*------------------------page1 home------------------------*/
+
+/*home-message*/
+.message{
+  /* font-family: 'raleway-r',sans-serif; */
+  height: auto;
+  float: right;
+  margin-top: 7%;
+  margin-right: 10%;
+  width:600px;
+  padding: 30px 30px 75px 70px;
+  background-color: RGBA(255,255,255,0.6);
+}
+
+.message h1{
+  font-family: 'raleway-sb',sans-serif;
+  font-size: 40px;
+  color: RGBA(255,255,255,0);
+  font-weight: lighter;
+  text-shadow: 1px 2px #757266;
+  margin-bottom:0;
+  margin-top:60px;
+}
+.message p{
+  font-family: 'raleway-r',sans-serif;
+  margin-top:15px;
+  margin-bottom:35px;
+  font-size:25px;
+  color:white;
+}
+
+#start_btn{
+  font-family: 'raleway-sb',sans-serif;
+  padding: 15px;
+  border-radius: 30px;
+  background-color:#FFDC46;
+  width: 190px;
+  text-align:center;
+}
+
+#start_btn:hover{
+  background-color:#757266;
+
+}
+#start_btn a{
+  color:#757266;
+  padding:10px;
+  font-size: larger;
+  font-weight: lighter;
+}
+#start_btn a:hover{
+  color:#FFDC46;
+}
+

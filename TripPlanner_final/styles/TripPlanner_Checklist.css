@@ -1,0 +1,144 @@
+@font-face {
+  font-family: 'raleway-t';
+  src: url("fonts/raleway_thin-webfont.ttf");
+}
+@font-face {
+  font-family: 'raleway-r';
+  src: url("fonts/Raleway-Regular.ttf");
+}
+@font-face {
+  font-family: 'raleway-m';
+  src: url("fonts/Raleway-Medium.ttf");
+}
+@font-face {
+  font-family: 'raleway-sb';
+  src: url("fonts/Raleway-SemiBold.ttf");
+}
+/*------------------------page4 checklist-------------------------*/
+
+#luggage,#todo,.cover{
+  overflow:hidden;
+  float:left;
+  width: 200px;
+  height:320px;
+  text-align:center;
+  margin:57px;
+}
+#luggage a,#todo a,.cover a{
+  float:left;
+  color:#757266;
+  padding: 15px 40px 220px 40px;
+  font-size: 18pt;
+  /* font-weight:bolder; */
+  border:solid #757266;
+  font-family: 'raleway-r',sans-serif;
+}
+#luggage a,#luggage-cover a{
+  background:url("images/icons/bagicon.png") no-repeat bottom;
+}
+#todo a,#todo-cover a{
+  background:url("images/icons/checklisticon.png") no-repeat bottom;
+}
+#luggage a:hover,#todo a:hover ,.add a:hover,.addtodo a:hover{
+  background-color:#FFCC33;
+}
+#luggage-cover a,#todo-cover a{
+  width:100px;
+  padding-left:35px;
+  background-color:#FFCC33;
+}
+#container_bf_c{
+  float: left;
+  width: 630px;
+  height: 400px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 150px;
+  bottom: 0;
+  margin: auto;
+  background-color: RGBA(255,255,255,0.8);
+  color: #757266;
+}
+
+.container3{
+  width: 1100px;
+}
+.container3-2{
+  width: 630px;
+}
+.container3,.container3-2{
+  float:left;
+  height: 400px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 150px;
+  bottom: 0;
+  margin: auto;
+  background-color: RGBA(255,255,255,0.8);
+}
+.cover{
+  margin: 50px 0 57px 30px;
+}
+.tabC-content{
+  float:right;
+  overflow:hidden;
+}
+.luggage_list{
+  float:left;
+  height:320px;
+  width:160px;
+  margin:40px 20px 40px 20px;
+  border:solid #757266;
+}
+.luggage_list img ,.todo_list img{
+  padding:5px 55px 5px 55px;
+  border-bottom:solid #757266;
+  background-color:#ccc;
+}
+.todo_list img{
+  padding:5px 135px;
+}
+.add,.addtodo{
+  margin: 10px;
+}
+.add input{
+  height: 25px;
+  width:140px;
+  margin-bottom:5px;
+  font-size:15px
+}
+.addtodo input{
+  height: 25px;
+  width:280px;
+  font-size:15px;
+  text-align:center;
+  margin-bottom:5px;
+}
+.add a,.addtodo a{
+  /* width:30px; */
+  /* height:30px; */
+  border-radius: 20px;
+  border: solid 2px #757266;
+  color: #757266;
+  background-color: #ccc;
+  margin: 0 55px 0 55px;
+  font-size: 24px;
+  padding: 0 10px;
+}
+.addtodo a{
+  margin:5px 120px;
+}
+
+#todoList{
+  float:left;
+  height:320px;
+  width:300px;
+  margin:40px 20px 40px 20px;
+  border:solid #757266;
+}
+
+.uldiv1,.uldiv2{
+  height: 200px;
+}

@@ -1,0 +1,122 @@
+<html>
+	<head>
+    <meta charset="utf-8" />
+    <title>TripPlanner</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js" type="text/javascript"></script>
+    <script src="prototype.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="styles/TripPlanner.css">
+    <link rel="stylesheet" href="styles/TripPlanner_Checklist.css">
+    <script src="tripPlanner.js" type="text/javascript"></script>
+		<script src="checklist_luggage.js" type="text/javascript"></script>
+	</head>
+	<body>
+    <header>
+      <div id = "navbar">
+        <nav>
+          <div id = "navbar_title">
+            <a href="home.html">Trip Planner</a>
+          </div>
+          <div id = "navbar_menu">
+            <ul>
+              <li><a href="home.html" >HOME</a></li>
+              <li><a href="before_schedule.html" >SCHEDULE</a></li>
+              <li class="active"><a href="checklist.html" >CHECKLIST</a></li>
+              <li><a href="overview.html" >OVERVIEW</a></li>
+              <li><a href="login.html" >LOGIN</a></li>
+              <li id="menuicon"><img src="styles/images/icons/menuicon.png",png></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section>
+			<div class="check_home">
+              <div class="container3">
+                      <!-- <a> -->
+                <div class="cover" id="luggage-cover"><a href="checklist.html" onclick="updateDB()">YOUR LUGGAGE</a></div>
+                      <!-- </a> -->
+                <div id="luggageList" class = "tabC-content">
+                  <form class="form">
+                    <div class="luggage_list">
+                      <img src="styles/images/icons/passporticon.png",png>
+                      <div class="uldiv1 scroll">
+                        <ul id="listDoc">
+                          <li>Passport<input type="checkbox" name="chk_doc" value="item1" class="doc_item"></li>
+                          <li>Ticket<input type="checkbox" name="chk_doc" value="item2" class="doc_item"></li>
+                          <li>My Diary<input type="checkbox" name="chk_doc" value="item3" class="doc_item"></li>
+                        </ul>
+                      </div>
+                      <div class="add">
+                        <input id="addDoc" type="text" placeholder="add list">
+                        <a href="javascript:void(0)" onclick="addList('listDoc','addDoc','doc_item')">+</a>
+                      </div>
+                    </div>
+                    <div class="luggage_list">
+                      <img src="styles/images/icons/clothicon.png",png>
+                      <div class="uldiv1 scroll">
+                        <ul id="listCloth">
+                          <li>Tie<input type="checkbox" name="chk_doc" value="item1" class="cloth_item"></li>
+                          <li>Socks<input type="checkbox" name="chk_doc" value="item2" class="cloth_item"></li>
+                          <li>Swimsuit<input type="checkbox" name="chk_doc" value="item3" class="cloth_item"></li>
+                        </ul>
+                       </div>
+                      <div class="add">
+                        <input id="addCloth" type="text" placeholder="add list">
+                        <a href="javascript:void(0)" onclick="addList('listCloth','addCloth','cloth_item')">+</a>
+                      </div>
+                    </div>
+                    <div class="luggage_list">
+                      <img src="styles/images/icons/medicineicon.png",png>
+                      <div class="uldiv1 scroll">
+                        <ul id="listMedic">
+                          <li>Flu<input type="checkbox" name="chk_doc" value="item1" class="medic_item"></li>
+                          <li>Headache<input type="checkbox" name="chk_doc" value="item2" class="medic_item"></li>
+                          <li>Diarrhea<input type="checkbox" name="chk_doc" value="item3" class="medic_item"></li>
+                        </ul>
+                      </div>
+                      <div class="add">
+                        <input id="addMedic" type="text" placeholder="add list">
+                        <a href="javascript:void(0)" onclick="addList('listMedic','addMedic','medic_item')">+</a>
+                      </div>
+                    </div>
+                    <div class="luggage_list">
+                      <img src="styles/images/icons/etcicon.png",png>
+                      <div class="uldiv1 scroll">
+                        <ul id="listEtc">
+                          <li>Tissue<input type="checkbox" name="chk_doc" value="item1" class="etc_item"></li>
+                          <li>Chopsticks<input type="checkbox" name="chk_doc" value="item2" class="etc_item"></li>
+                          <li>Soy Sauce<input type="checkbox" name="chk_doc" value="item3" class="etc_item"></li>
+                        </ul>
+                      </div>
+                      <div class="add">
+                        <input id="addEtc" type="text" placeholder="add list">
+                        <a href="javascript:void(0)" onclick="addList('listEtc','addEtc','etc_item')">+</a>
+                      </div>
+                     </div>
+
+
+                  </form>
+                </div>
+
+              </div>
+            </div>
+		</section>
+
+    <footer>
+      <div id="footer">
+        <div id="footer_aboutUs">
+          <h2>About Us :</h2>
+          <ul>
+            <li>Team : W4Schools</li>
+            <li>Prject Name : TRIP PLANNER</li>
+          </ul>
+        </div>
+        <div id="footer_copyright">
+          <h2>Copyright By : </h2>
+          <p>Hanyang University, Computer Science Engineering, W4Schools</p>
+        </div>
+      </div>
+    </footer>
+
+	</body>
+</html>
